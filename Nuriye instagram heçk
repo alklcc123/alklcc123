@@ -1,0 +1,41 @@
+#------Farklı API'ler kullanan rastgele şaka işlevleri
+içe aktarma  istekleri
+ rastgele içe aktar
+def  geeks ():
+    url  =  "https://geek-jokes.sameerkumar.website/api"
+    cevap  =  istekler . al ( url )
+    cevap _ kodlama  =  "utf-8"
+    veri  =  cevap . json ()
+    dönüş ( veri )
+
+ kesinlikle chuck_norris ( ):
+  url  =  "https://api.icndb.com/jokes/random"
+  cevap  =  istekler . al ( url )
+  cevap _ kodlama  =  "utf-8"
+  veri  =  cevap . json ()
+  dönüş ( veri [ "değer" ][ "şaka" ])
+
+def  stormconsultancy_quotes ():
+    url  =  "http://quotes.stormconsultancy.co.uk/random.json"
+    cevap  =  istekler . al ( url )
+    cevap _ kodlama  =  "utf-8"
+    veri  =  cevap . json ()
+    dönüş ( veri [ "alıntı" ])
+
+def  cat_fact_quotes ():
+    url  =  "https://cat-fact.herokuapp.com/facts/random"
+    cevap  =  istekler . al ( url )
+    cevap _ kodlama  =  "utf-8"
+    veri  =  cevap . json ()
+    dönüş ( veri [ "metin" ])
+
+ tanım get_msg ( ):
+    x  =  rastgele . randint ( 0 , 3 )
+    eğer ( x  ==  0 ):
+        dönüş ( geeks ())
+    elif ( x  ==  1 ):
+        dönüş ( chuck_norris ())
+    elif ( x  ==  2 ):
+        dönüş ( stormconsultancy_quotes ())
+    elif ( x  ==  3 ):
+        dönüş ( cat_fact_quotes ())
